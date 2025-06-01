@@ -1,0 +1,993 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  background-position: center center; 
+}
+
+
+
+
+
+/* HEADER */
+
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: center;   /* horizontally center */
+  align-items: center;       /* vertically center */
+  height: 100px;             /* adjust as needed */
+  padding: 0 20px;
+  background-color: #D48C8C;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+#brand {
+  display: flex;
+  align-items: center;
+  font-family: 'Chillax', sans-serif;
+  width: 100%;
+  padding: 20px 0; /* optional spacing */
+}
+
+#brand img {
+  max-height: 80px;          /* ensures it fits nicely */
+  width: auto;
+  display: block;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#brand h1 {
+  margin-left: 20px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 400;
+  color: rgba(99, 101, 102, 0.5);
+}
+
+ul a {
+  color: #000;
+}
+
+ul a:hover {
+  color: #F4E4D4;
+  transition: 0.5s;
+}
+
+ul li {
+  padding-right: 80px;
+  margin-left: 10px;
+}
+
+ul li a {
+  white-space: nowrap;
+}
+
+
+
+.hamburger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 44px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#hamburger-icon div{
+  width: 35px;
+  height: 3px;
+  background-color: #000;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: #D48C8C;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  z-index: -1;
+  padding: 80px 0;
+}
+
+.mobile-menu li {
+  margin-top: 40px;
+  font-size: 20px;
+  padding: 2px;
+}
+
+
+
+
+/* BODY */
+
+.main-image {
+  width: 100vw;
+  margin-bottom: -5px;
+}
+
+.better-content {
+  background-color: #F4E4D4;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.better-content h1, .web-design-example {
+  font-family: 'Chillax', sans-serif;
+  font-size: 40px;
+}
+
+.better-content p {
+  font-family: 'Quicksand', sans-serif;
+  width: 60vw;
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 30px 0;
+  line-height: 25px;
+}
+
+.inspired-btn {
+  background-color: #D48C8C;
+  color: white;
+  border: 2px solid black;
+  padding: 22px 74px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.inspired-btn:hover {
+  background-color: white;
+  color: black;
+}
+
+.iphone, .icons {
+  display: flex;
+  justify-content: space-between;
+  background-color: #BB7979;
+}
+
+.iphone video, .right video, .socials video, .pink video {
+  width: 360px;
+  height: 640px;
+}
+
+.icons {
+  margin-top: -5px;
+}
+
+.icon-section {
+  width: 33.33%;
+  box-sizing: border-box;
+  padding: 20px; /* Optional: spacing inside each section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.icon-section img {
+  width: 220px; /* Adjust as needed */
+  height: auto; /* Keeps the aspect ratio */
+  margin-top: 10px; /* Optional spacing */
+}
+
+.icon-section h1 {
+  font-family: 'Chillax', sans-serif;
+  font-size: 40px;
+}
+
+.icon-section p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+}
+
+#middle {
+   background-color: #D48C8C;
+}
+
+
+
+
+.social-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* optional: aligns content vertically */
+  text-align: center;
+  background-color: #F4E4D4;
+}
+
+.social-content img {
+  width: 50vw;
+  height: auto;
+}
+
+.left {
+  width: 50vw;
+  padding: 0 30px;
+}
+
+.social-content h1 {
+  font-family: 'Chillax', sans-serif;
+  font-size: 40px;
+}
+
+.social-content p {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 30px 0;
+  line-height: 25px;
+}
+
+.why-us {
+    background-color: #BB7979;
+    margin-top: -5px;
+}
+
+.why-us h1 {
+  font-family: 'Chillax', sans-serif;
+}
+
+.why-title {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.why-us p {
+   font-family: 'Quicksand', sans-serif;
+   font-size: 20px;
+   width: 50vw;
+}
+
+.why {
+  display: flex;
+}
+
+.why-left img {
+  width: 250px;             /* or any size you want */
+  height: 250px;
+  object-fit: cover;        /* ensures it fills the circle */
+  border-radius: 50%;       /* makes it a perfect circle */
+  display: block;
+}
+
+.why-left {
+  display: flex;
+  margin: 0 150px;
+  justify-content: center;
+  align-items: center;
+}
+
+.why-title {
+  color: #F4E4D4;
+  font-size: 50px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.why-right h1::after {
+  content: "";
+  display: block;
+  width: 90px;              /* length of the line */
+  height: 2px;
+  background-color: #F4E4D4;  /* or your brand color */
+  margin-top: 10px;
+}
+
+.why-right h1 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.why-right {
+  padding-bottom: 40px;
+}
+
+
+
+.footer {
+  background-color: #F4E4D4;
+  margin-top: -5px;
+  font-family: 'Quicksand', sans-serif;
+  text-align: left;
+  padding: 50px 100px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #000;
+}
+
+.hi img{
+  width: 100px;
+}
+
+.follow img{
+  width: 120px;
+}
+
+#links {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.hi {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.says {
+  padding: 0 30px;
+}
+
+
+.color1 {
+    background-color: #FF6F91;
+}
+
+.color2 {
+    background-color: #F67280;
+}
+
+.color3 {
+    background-color: #D8A7B1;
+}
+
+.color4 {
+    background-color: #2E2E2E;
+}
+
+.color5 {
+    background-color: #F4E4D4;
+}
+
+.color6 {
+    background-color: #A8C3AB;
+}
+
+.playfair {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.quicksand {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+}
+
+
+
+
+
+/* WEB DESIGN PAGE */
+
+#web-headline {
+  font-size: 30px;
+  text-align: left;
+  width: 70vw;
+  padding-left: 70px;
+}
+
+.web-section {
+  display: flex;
+  text-align: left;
+  align-items: center;      /* Vertically center */
+  justify-content: space-between;  /* Space between text and image */
+  gap: 2rem;                /* Optional spacing between items */
+  padding: 2rem;  
+}
+
+.web-section img {
+  width: 250px;
+  height: auto;
+  margin-right: 70px;
+}
+
+.designs {
+  display: flex;
+  justify-content: center;
+  padding-left: 140px;
+  background-color: #BB7979;
+}
+
+.bullets {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.bullets img {
+  width: 40px;
+  height: 40px;
+}
+
+.bullets p {
+  font-weight: 600;
+  font-size: 25px;
+  padding-left: 10px;
+}
+
+.web-video {
+  width: 300px;
+  margin-right: 100px;
+}
+
+.web-page {
+  padding: 50px;
+}
+
+.design-image {
+  display: flex;
+}
+
+.design-image img {
+  width: 450px;
+}
+
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 10px;
+}
+
+.image-wrapper .overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: bottom 0.4s ease-in-out;
+  pointer-events: none; /* Let clicks go through to the link */
+}
+
+.green {
+  background-color: rgba(0, 255, 0, 0.5);
+}
+
+.red {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.yellow {
+  background-color: rgba(255, 255, 0, 0.5);
+
+}
+
+.image-wrapper:hover .overlay {
+  bottom: 0;
+}
+
+.why-us-web {
+    background-color: #BB7979;
+    margin-top: -5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.why-us-web h1 {
+  font-family: 'Chillax', sans-serif;
+  margin-bottom: 20px;
+}
+
+#talk {
+  padding: 0 70px;
+}
+
+.right video {
+  margin-left: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SOCIAL MEDIA PAGE */
+
+
+.socials {
+  background-color: #F4E4D4;
+  display: flex;
+  align-items: center;
+}
+
+.socials h1, .advertising h1, .exposure h1 {
+  font-family: 'Chillax', sans-serif;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.socials p {
+  width: 40vw;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+}
+
+.advertising p, .row-item img {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 19px;
+  padding-bottom: 20px;
+}
+
+.advertising {
+  background-color: #BB7979;
+  text-align: center;
+  padding: 40px 180px;
+}
+
+.row {
+  display: flex;
+  padding-bottom: 30px;
+}
+
+.row-item img{
+  width: 100px;
+}
+.row-item {
+  padding: 0 20px;
+}
+
+.ad-p {
+  margin-bottom: 50px;
+}
+
+#ad-title {
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.exposure {
+  background-color: #F4E4D4;
+  display: flex;
+  padding: 40px 180px;
+}
+
+.exposure p {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.exposure img {
+  width: 1200px;
+}
+
+.ex-right, .exposure img {
+  padding: 0 40px;
+}
+
+#bold {
+  font-weight: 600;
+}
+
+.pink {
+   background-color: #BB7979;
+   display: flex;
+   align-items: center;
+   padding: 0 80px
+}
+
+
+.pink-bull {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.pink-bull img {
+  width: 40px;
+  height: 40px;
+}
+
+.pink-bull p{
+  font-family: 'Quicksand', sans-serif;
+}
+
+.pink-title {
+  font-size: 27px;
+  font-weight: 600;
+  padding-left: 15px;
+}
+
+.pink-desc {
+  font-size: 23px;
+  padding-left: 15px;
+}
+
+
+
+
+
+
+
+/* CONTACT */
+
+.contact-box {
+  padding: 0 380px;
+  text-align: left;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: none; 
+  border-bottom: 1px solid #ccc;
+  outline: none;
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 22vw;
+  font-size: 20px;
+   font-family: 'Quicksand', sans-serif;
+}
+
+
+textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  box-sizing: border-box;
+  padding: 10px;
+   font-family: 'Quicksand', sans-serif;
+}
+
+#sub-btn {
+  margin-top: 20px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  #hamburger-icon {
+    display: block;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  #brand {
+  flex-direction: column;   /* stacks image and h1 */  
+  text-align: center;
+}
+
+  #brand h1 {
+  display: none;
+}
+
+.iphone {
+  display: block;
+}
+
+.iphone video {
+   width: 100%;               /* Full width of the screen */
+  height: auto;              /* Keeps aspect ratio */
+  max-width: 100%;           /* Prevents overflow */
+  display: block;
+}
+
+.social-content, .icons, .better-content
+{
+  flex-direction: column;
+}  
+
+.left {
+  width: 100vw; 
+}
+
+.social-content img {
+  width: 100vw;
+  height: auto;
+}
+
+.icon-section {
+  width: 100%;
+}
+
+.icon-section img {
+  width: 150px; /* Adjust as needed */
+  height: auto; /* Keeps the aspect ratio */
+  margin-top: 10px; /* Optional spacing */
+}
+
+#seo {
+  font-size: 35px;
+}
+
+.better-content h1, .social-content h1 {
+  font-size: 20px;
+}
+
+.better-content p {
+  width: 100vw;
+  font-size: 13px;
+  padding: 30px 0;
+  line-height: 20px;
+}
+
+
+.social-content p {
+  font-size: 13px;
+  padding: 30px 0;
+  line-height: 20px;
+}
+
+.inspired-btn {
+  padding: 11px 37px;
+  font-size: 13px;
+}
+
+.left h1 {
+  margin-top: 20px;
+}
+
+.why {
+  display: block;
+}
+
+.why-us {
+  padding-bottom: 30px;
+}
+
+.why-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.why-left img {
+  width: 150px;             /* or any size you want */
+  height: 150px;
+}
+
+.why-left {
+  align-items: center;
+  margin: 0;
+}
+
+.why-right {
+  padding: 0 24px;
+}
+
+.why-right h1{
+  font-size: 25px;
+}
+
+.why-us p {
+   font-size: 18px;
+   width: 80vw;
+}
+
+.hi img{
+  width: 80px;
+}
+
+.follow img{
+  width: 90px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+#brand {
+  display: none;
+}
+
+.says {
+  padding: 20px 0;
+}
+
+.hi {
+  align-items: center;
+}
+
+.bullets img{
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.design-image {
+  flex-direction: column;
+}
+
+.image-wrapper {
+  width: 90vw;
+}
+
+.designs {
+  padding: 30px 0;
+}
+
+.designs img {
+  width: 90vw;
+}
+
+#talk {
+  padding-bottom: 40px;
+}
+
+.right {
+  width: 100vw;
+}
+
+.right video {
+  width: 270px;    /* 360 × 0.75 */
+  height: 480px; 
+}
+
+.web-section img {
+   width: 150px;
+  height: auto;
+  margin: 0;
+}
+
+.web-section p{
+  width: 80vw;
+}
+
+.socials {
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.row {
+  flex-direction: column;
+}
+
+.exposure {
+  flex-direction: column;
+  padding: 0;
+}
+
+.exposure img {
+  width: 400px;
+  padding: 0;
+}
+
+.pink {
+  flex-direction: column;
+  padding: 0 30px;
+}
+
+.socials p {
+  width: 80vw;
+}
+
+.advertising {
+  padding: 0;
+}
+
+.pink-title {
+  font-size: 20px;
+}
+
+.pink-bull img{
+  width: 30px;
+  height: 30px;
+}
+
+.pink-bull {
+  align-items: center;
+}
+
+.pink-desc {
+  font-size: 17px;
+  text-align: right;
+}
+
+.pink video {
+  margin-bottom: 30px;
+}
+
+
+
+.contact-box {
+  padding: 0 30px;
+}
+
+input {
+  width: 40vw;
+}
+
+.right video {
+  margin: 0;
+}
+
+}
