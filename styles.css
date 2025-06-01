@@ -947,15 +947,16 @@ textarea {
 }
 
 .socials p {
-  width: 80vw;
+  width: 90vw;
 }
 
 .advertising {
-  padding: 0;
+  padding: 20px 0;
 }
 
 .pink-title {
   font-size: 20px;
+  margin-left: 15px;
 }
 
 .pink-bull img{
@@ -970,6 +971,7 @@ textarea {
 .pink-desc {
   font-size: 17px;
   text-align: right;
+  padding: 0;
 }
 
 .pink video {
@@ -990,4 +992,13 @@ input {
   margin: 0;
 }
 
+#web-headline {
+  text-align: center;
+  width: 90vw;
+  padding: 0;
+}
+
+.web-section img {
+  display: none;
+}
 }
